@@ -13,4 +13,4 @@ My PhD project is supervised by [Prof. Tony Belpaeme](https://www.tonybelpaeme.m
 
 Before starting my PhD research, I got a Master's degree in Computer Science Engineering from Ghent University, in 2021, with a focus on Artificial Intelligence.
 
-Want to get in touch? Use any of the channels listed below, or just send me an email at rmajanss[dot]janssens[at]ugent[dot]be.
+Want to get in touch? Use any of the channels listed below, or just send me an email at ruben[dot]janssens[at]ugent[dot]be.
