@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Audiovisual Learning
-description: Limitations of audiovisual speech on robots for second language pronunciation learning
+description: Why realistic lip movements might not make social robots better for language learning 
 ---
 
 If you want to know more about this research, [read our paper](https://dl.acm.org/doi/10.1145/3568162.3578633), which was presented at the 2023 Human-Robot Interaction conference! You can also watch our [presentation](https://www.youtube.com/watch?v=pWMPBNGwmMY) just below.
