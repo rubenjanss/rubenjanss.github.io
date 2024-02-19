@@ -64,6 +64,7 @@ But what do these performance increases actually mean? Get an impression with th
     * Azure: "The dog is on top of the set."
     * Google: "The dog is on top of the set."
 
+# Paper and contact
 
 If you want to know more about this research, [read our paper](../../child-asr/child-asr-paper.pdf), which will be presented at the 2024 Technological Advances in Human-Robot Interaction symposium!
 
