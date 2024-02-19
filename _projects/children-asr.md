@@ -17,17 +17,17 @@ Based on this experiment, we provide three recommendations for anyone looking to
 1. Child speech recognition works.
     Mostly, especially comparing to 2017. Adult-like recognition is not yet available, but the best model recognizes 60% of utterances correctly, barring small grammatical differences.
 
-    <img src="../child-asr/lev_with_old.PNG" width="400">
+    <img src="../../child-asr/lev_with_old.PNG" width="400">
 
 2. Use a locally hosted model.
     The responsiveness is significantly better than that of cloud-based solutions, and they can even outperform cloud-based solutions in accuracy.
 
-    <img src="../child-asr/scatter.png" width="400">
+    <img src="../../child-asr/scatter.png" width="400">
 
 3. Use an external microphone.
     It significantly improves recognition performance, regardless of the quality of the microphone, as opposed to using a microphone that is embedded in the robot.
 
-    <img src="../child-asr/lev_mic.PNG" width="400">
+    <img src="../../child-asr/lev_mic.PNG" width="400">
 
 # Examples
 
@@ -37,7 +37,7 @@ But what do these performance increases actually mean? Get an impression with th
 
     In this clip, the child is retelling a story from a picture book.
 
-    <audio controls><source src="www.rubenjanssens.be/assets/clips/child_asr/sample1.wav" /></audio>
+    <audio controls><source src="../../assets/clips/child_asr/sample1.wav" /></audio>
 
     * Ground truth: "then the boy fell over and all of the bees was flying"
     * Whisper: "Then the boy fell over and all of the bees."
@@ -46,7 +46,7 @@ But what do these performance increases actually mean? Get an impression with th
 
 2. **Another spontaneous speech clip**
 
-    <audio controls><source src="../assets/clips/child_asr/sample2.wav" /></audio>
+    <audio controls><source src="../../assets/clips/child_asr/sample2.wav" /></audio>
 
     * Ground truth: "and then they fell to the water"
     * Whisper: "And then they fell through the roof, huh?"
@@ -57,7 +57,7 @@ But what do these performance increases actually mean? Get an impression with th
 
     In this clip, the child is repeating a sentence spoken by the experimenter. You can hear a lot of background noise, because the sample was recorded in a school, but also because it was recorded using the microphone that is embedded in a Nao robot, so robot's fans are making a lot of noise that is audible in the clip.
 
-    <audio controls><source src="../assets/clips/child_asr/sample3.wav" /></audio>
+    <audio controls><source src="../../assets/clips/child_asr/sample3.wav" /></audio>
 
     * Ground truth: "The dog is on top of the shed"
     * Whisper: "The dog is a dog of the sun"
@@ -65,7 +65,7 @@ But what do these performance increases actually mean? Get an impression with th
     * Google: "The dog is on top of the set."
 
 
-If you want to know more about this research, [read our paper](../child-asr/child-asr-paper.pdf), which will be presented at the 2024 Technological Advances in Human-Robot Interaction symposium!
+If you want to know more about this research, [read our paper](../../child-asr/child-asr-paper.pdf), which will be presented at the 2024 Technological Advances in Human-Robot Interaction symposium!
 
 Feel free to get in touch if you have any other questions or want to know more! You can use any of the channels at the bottom of this page, or send an email to ruben[dot]janssens[at]ugent[dot]be.
 
