@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link rel="stylesheet" href="//assets/css/main.css">
+
+        <h1 class="post-headline">Ruben Janssens</h1>
+        <h3 class="post-description">Human-Robot Interaction PhD Researcher @ Ghent University</h3>
+
+        <div class="links scroll">
+        <a href="//">Home</a>
+        <a href="//projects/">Research</a>
+        <!--<a href="//teaching/">Teaching</a>
+        <a href="//policy/">Policy</a>
+        <a href="//outreach/">Outreach</a>
+        <a href="//publications/">Publications</a>-->
+        <a href="//cv/">CV</a>
+        <!--<a href="//blog/">Blog</a>
+        <a href="//archive/">Archive</a>-->
+</div>
+
+
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Child Speech Recognition | Ruben Janssens</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Child Speech Recognition" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Automatic Speech Recognition finally works well for young children." />
+<meta property="og:description" content="Automatic Speech Recognition finally works well for young children." />
+<link rel="canonical" href="http://localhost:4000/projects/children-asr/" />
+<meta property="og:url" content="http://localhost:4000/projects/children-asr/" />
+<meta property="og:site_name" content="Ruben Janssens" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-30T13:26:13+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Child Speech Recognition" />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-30T13:26:13+01:00","datePublished":"2025-01-30T13:26:13+01:00","description":"Automatic Speech Recognition finally works well for young children.","headline":"Child Speech Recognition","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/children-asr/"},"url":"http://localhost:4000/projects/children-asr/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+        <!-- Generated using https://favicon.io/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?">
+<link rel="manifest" href=site.webmanifest">
+
+
+        <!-- MathJax -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+     processEscapes: true
+    }
+  });
+</script>
+
+
+        <!-- Load fontawesome here for faster loadtimes: https://stackoverflow.com/a/35880730/9523246 -->
+        <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.11.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+
+    </head>
+
+    <body>
+        <main>
+            <article>
+                <h1 class="post-headline">Child Speech Recognition</h1>
+<p class="meta"><small>January 30, 2025</small></p>
+
+<p>Child speech is very different from that of adults: higher pitch, more disfluencies, grammatical mistakes. And while Automatic Speech Recognition (ASR) performs impressively for adults, it has been shown to be very unreliable for young children <a href="https://dl.acm.org/doi/abs/10.1145/2909824.3020229" target="_blank" rel="noopener noreferrer">(Kennedy et al., 2017)</a>, hindering child-robot interaction.
+The past seven years have brought many new advances in deep learning, such as the Transformer architecture. Those advances also helped to improve ASR systems: OpenAI’s Whisper model is an example of this.
+However, the question remains: has this also improved ASR performance for children?</p>
+
+<p>We repeated Kennedy et al.’s experiment from 2017 with the state-of-the-art ASR systems available today. <a href="https://zenodo.org/records/200495" target="_blank" rel="noopener noreferrer">Their dataset</a> contains speech from 11 children from English primary schools, around 5 years old. Each child repeated 5 sentences spoken by the experimenter, but also produced spontaneous speech by retelling a story from a picture book, resulting in 222 spontaneous speech utterances. We compare the performance of the 2024 ASR systems provided by Google and Microsoft Azure as well as OpenAI’s Whisper model when transcribing these children’s speech samples.</p>
+
+<h1 id="recommendations">Recommendations</h1>
+
+<p>Based on this experiment, we provide three recommendations for anyone looking to use automatic speech recognition in child-robot interactions:</p>
+
+<ol>
+  <li>
+    <p>Child speech recognition works.
+ Mostly, especially comparing to 2017. Adult-like recognition is not yet available, but the best model recognizes 60% of utterances correctly, barring small grammatical differences, compared to 20% in 2017. However, very short and very long utterances remain a problem.</p>
+
+    <p><img src="../../child-asr/lev_with_old.PNG" width="400"></p>
+  </li>
+  <li>
+    <p>Prime your models.
+ Most speech recognition models can be primed or prompted to expect certain utterances. This can strongly boost performance. For samples containing a single number, priming boosted accuracy from 40% to 72%. For short sentences, perfect accuracy can even be achieved in a multiple-choice setting.</p>
+  </li>
+  <li>
+    <p>Use a locally hosted model.
+ The responsiveness is significantly better than that of cloud-based solutions, and they can even outperform cloud-based solutions in accuracy.</p>
+
+    <p><img src="../../child-asr/scatter.png" width="400"></p>
+  </li>
+  <li>
+    <p>Use an external microphone.
+ It significantly improves recognition performance, regardless of the quality of the microphone, as opposed to using a microphone that is embedded in the robot.</p>
+
+    <p><img src="../../child-asr/lev_mic.PNG" width="400"></p>
+  </li>
+</ol>
+
+<h1 id="examples">Examples</h1>
+
+<p>But what do these performance increases actually mean? Get an impression with the following examples:</p>
+
+<ol>
+  <li>
+    <p><strong>Spontaneous speech</strong></p>
+
+    <p>In this clip, the child is retelling a story from a picture book.</p>
+
+    <audio controls=""><source src="../../assets/clips/child_asr/sample1.wav"></source></audio>
+
+    <ul>
+      <li>Ground truth: “then the boy fell over and all of the bees was flying”</li>
+      <li>Whisper: “Then the boy fell over and all of the bees.”</li>
+      <li>Azure: “Then the boy fell over and all of the bees”</li>
+      <li>Google: “in the boy fell over and all of the beast was was flying”</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Another spontaneous speech clip</strong></p>
+
+    <audio controls=""><source src="../../assets/clips/child_asr/sample2.wav"></source></audio>
+
+    <ul>
+      <li>Ground truth: “and then they fell to the water”</li>
+      <li>Whisper: “And then they fell through the roof, huh?”</li>
+      <li>Azure: “And then?”</li>
+      <li>Google: “defer to the water”</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Sentence with loud background noise</strong></p>
+
+    <p>In this clip, the child is repeating a sentence spoken by the experimenter. You can hear a lot of background noise, because the sample was recorded in a school, but also because it was recorded using the microphone that is embedded in a Nao robot, so robot’s fans are making a lot of noise that is audible in the clip.</p>
+
+    <audio controls=""><source src="../../assets/clips/child_asr/sample3.wav"></source></audio>
+
+    <ul>
+      <li>Ground truth: “The dog is on top of the shed”</li>
+      <li>Whisper: “The dog is a dog of the sun”</li>
+      <li>Azure: “The dog is on top of the set.”</li>
+      <li>Google: “The dog is on top of the set.”</li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="paper-and-contact">Paper and contact</h1>
+
+<p>If you want to know more about this research, <a href="../../child-asr/child-asr-paper-icsr.pdf">read our paper</a>, which will be presented at the 2024 International Conference on Social Robotics!</p>
+
+<p>We informally presented an earlier version of this work at the 2024 Symposium on Technological Advances in Human-Robot Interaction. Although not officially published, that version of the paper is still available <a href="../../child-asr/child-asr-paper.pdf">here</a>.</p>
+
+<p>Feel free to get in touch if you have any other questions or want to know more! You can use any of the channels at the bottom of this page, or send an email to ruben[dot]janssens[at]ugent[dot]be.</p>
+
+<p>If you use our work in any future research, please use the following citation:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{janssens2024child,
+author = {Janssens, Ruben and Verhelst, Eva and Abbo, Giulio Antonio and Ren, Qiaoqiao and Pinto Bernal, Maria Jose and Belpaeme, Tony},
+title = {Child Speech Recognition in Human-Robot Interaction: Problem Solved?},
+year = {2024},
+booktitle = {2024 International Conference on Social Robotics},
+}
+</code></pre></div></div>
+
+
+<!-- Comments only for posts -->
+
+
+            </article>
+        </main>
+
+        <footer>
+          <p class="copy">
+            <small> © Ruben Janssens 2025
+                    | Powered by Jekyll and
+                    <a target="_blank" href="https://github.com/jitinnair1/gradfolio/" rel="noopener noreferrer">Gradfolio</a>.
+                    Last updated on 30 January 2025
+            </small>
+          </p>
+
+        <div class="rounded-social-buttons">
+<a title="" class="social-button linkedin" href="https://www.linkedin.com/in/rubenjanss" itemprop="sameAs" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-linkedin"></i>
+</a><a title="" class="social-button github" href="https://www.github.com/rubenjanss" itemprop="sameAs" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-github"></i>
+</a><a title="" class="social-button researchgate" href="https://www.researchgate.net/profile/Ruben-Janssens" itemprop="sameAs" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-researchgate"></i>
+</a><a title="" class="social-button orcid" href="https://orcid.org/0000-0002-1790-9531" itemprop="sameAs" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-orcid"></i>
+</a><a title="" class="social-button twitter" href="https://www.twitter.com/rubenjanss" itemprop="sameAs" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-twitter"></i>
+</a>
+</div>
+
+
+        </footer>
+
+        <!-- Google Analytics Tracking code -->
+<script src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js" async></script>
+<script>
+var galite = galite || {};
+galite.UA = '';
+</script>
+
+    </body>
+
+</html>
