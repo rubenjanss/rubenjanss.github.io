@@ -12,9 +12,21 @@ What if the robot could actually reason about how much the user would enjoy what
 
 >**We showed that LLMs can be used to do this: predicting a user's enjoyment of a robot utterance in dialogue, before the user has even reacted.**
 
-The system we built uses GPT-4o as predictor. As you can see in the image below, we provide it one "exchange" (a user utterance and the robot's response to it), along with the history of the dialogue before the exchange. We also give it 
+The system we built uses GPT-4o as predictor. As you can see in the image below, we provide it one "exchange" (a user utterance and the robot's response to it), along with the history of the dialogue before the exchange. We also give it information about the enjoyment scale we're using (HRI CUES), with descriptions of each of the five points on the 1 through 5 scale as well as labelled dialogue examples. The system then outputs a predicted enjoyment score, along with a reasoning for that score.
 
-<img src="../../enjoyment-predictions/poster-fullsystem.PNG" width="400">
+<img src="../../enjoyment-prediction/poster-fullsystem.PNG" width="400">
+
+We evaluated the performance of this system. Using a dataset of 175 minutes of Swedish human-robot chit-chat conversations, we compared the scores our system predicted against what a similar system that does have access to the user's response outputs, and with scores given by human expert annotators.
+
+>**Our results show that our system performs similarly to human expert annotators and even performs similarly when it does not have access to the user's response to when it does have access to the user's response.**
+
+Even more so, this sytem still achieves significant correlation with the user's own reports of their enjoyment of the dialogue when applied to a completely different type of dialogue in a different language.
+
+>**These results enable future work in developing adaptive conversational systems, as the robot could choose an utterance that has a higher predicted user enjoyment, or train itself to generate more enjoyable conversation.**
+
+We also plan to further analyse the reasoning that the model outputs, as well as integrating multimodal information in the model's predictions.
+
+If you want to know more about this research, [read our paper](../../enjoyment-prediction/enjoyment-prediction-lbr.pdf), which will be presented at the 2025 ACM/IEEE International Conference on Human-Robot Interaction!
 
 Feel free to get in touch if you have any other questions or want to know more! You can use any of the channels at the bottom of this page, or send an email to ruben[dot]janssens[at]ugent[dot]be.
 
