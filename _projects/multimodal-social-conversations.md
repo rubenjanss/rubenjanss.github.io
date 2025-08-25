@@ -8,6 +8,8 @@ Large language models have given social robots the ability to autonomously engag
 
 If you want to know more about this research, [read our paper](../../multimodal-social-conversations/fomo-multimodal-social-conversations.pdf), which will be presented at the Foundation Models (FoMo-HRI) workshop at the 2025 IEEE International Conference on Robot-Human Interactive Communication (RO-MAN)!
 
+<a href="../../multimodal-social-conversations/fomo-multimodal-social-conversations.pdf" class="button">Read our paper (PDF)</a>
+
 Feel free to get in touch if you have any other questions or want to know more! You can use any of the channels at the bottom of this page, or send an email to ruben[dot]janssens[at]ugent[dot]be.
 
 If you use our work in any future research, please use the following citation:
