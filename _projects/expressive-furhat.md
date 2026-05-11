@@ -25,7 +25,7 @@ If you use our work in any future research, please use the following citation:
 ~~~~
 @inproceedings{abbo2026expressive,
   title={Expressive Furhat: Generating Real-Time Facial Expressions
-for Human-Robot Dialogue with LLM},
+for Human-Robot Dialogue with LLMs},
   author={Abbo, Giulio Antonio and Janssens, Ruben and Van de Vreken, Seppe and Belpaeme, Tony},
   booktitle={Companion Proceedings of the
 21st ACM/IEEE International Conference on Human-Robot Interaction (HRI
