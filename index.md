@@ -3,7 +3,7 @@ layout: about
 permalink: /
 profile:
   align: right
-  image: profielfoto26-square-mid
+  image: profielfoto26-square-mid.jpg
 published: true
 ---
 
